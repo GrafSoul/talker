@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 
-import Layout from './hoc/Layout/Layout';
-import Talker from './Talker/Talker';
+import Aux from './hoc/AuxComponent/AuxComponent';
+import Header from './components/Header/Header';
+import Talker from './components/Talker/Talker';
 
 class App extends Component {
     render() {
         return (
-            <Layout>
+            <Aux>
+                <Header />
                 <Talker />
-            </Layout>
+            </Aux>
         );
     }
 }

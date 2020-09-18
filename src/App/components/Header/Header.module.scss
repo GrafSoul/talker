@@ -1,23 +1,57 @@
 .header {
-    background-color: #002b2c;
-    opacity: 0.8;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+	position: relative;
+	z-index: 20;
+	-webkit-user-select: none;
+	background-color: #282c34;
+	overflow: hidden;
 
+	.topBar {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 0 0 0 10px;
+		background-color: #21252b;
+		-webkit-app-region: drag;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		color: #fff;
+		z-index: 10;
+		transition: all 0.3s ease;
+	}
 
-    .headerWrap {
-        padding: 10px;
-    }
+	.title {
+		margin-top: 3px;
+		font-family: "SFUIProDisplay", sans-serif;
+		font-size: 16px;
+		font-weight: bold;
+		color: #9da5b4;
+	}
 
-    h1 {
-        margin: 0;
-        padding: 0;
-        font-family: "Oswald", sans-serif;
-        color: #fff;
-        font-size: 1.2em;
-        text-align: center;
-    }
+	.title i {
+		margin-right: 5px;
+	}
+
+	.btnWindow,
+	.closeWindow {
+		font-size: 16px;
+		padding: 4px 11px;
+		cursor: pointer;
+		-webkit-app-region: no-drag;
+		background-color: #21252b;
+		color: #9da5b4;
+		border: none;
+		outline: none;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: #fff;
+			background-color: #37373b;
+		}
+	}
+
+	.closeWindow:hover {
+		background-color: #f50a3d !important;
+	}
 }

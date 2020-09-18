@@ -49,6 +49,7 @@ const createWindow = async () => {
         backgroundColor: '#282c34',
         webPreferences: {
             nodeIntegration: true,
+            enableRemoteModule: true,
             webSecurity: false,
         },
     });
@@ -104,11 +105,9 @@ const createWindow = async () => {
         mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show();
     });
 
-    tray.setToolTip('Wrapps');
+    tray.setToolTip('Talker');
 
     tray.setContextMenu(contextMenu);
-
-    console.log(mainWindow.getTitle());
 
     // Tray End ////////////////////////////////////////////////////////
 };
