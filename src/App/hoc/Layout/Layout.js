@@ -9,7 +9,7 @@ import Aux from '../AuxComponent/AuxComponent';
 
 class Layout extends Component {
     state = {
-        title: 'WrappS',
+        title: 'Talker',
         showSideDrawer: false,
         statusWindow: false,
     };
@@ -38,7 +38,7 @@ class Layout extends Component {
                 <div className={classes.layout}>
                     <div className={classes.topbar}>
                         <div className={classes.title}>
-                            <i className="fas fa-film"></i>
+                            <i className="fas fa-podcast"></i>
                             {this.state.title}
                         </div>
                         <div>
