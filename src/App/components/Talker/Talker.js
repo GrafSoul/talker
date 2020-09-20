@@ -7,10 +7,10 @@ import {
     FormGroup,
     Label,
     Input,
-    Col,
 } from 'reactstrap';
 
 import PlayControl from '../PlayControl/PlayControl';
+import LevelsControl from '../LevelsControl/LevelsControl';
 import classes from './Talker.module.scss';
 
 const Talker = () => {
@@ -238,6 +238,7 @@ const Talker = () => {
                                         onClick={handlerStop}
                                     ></Input>
                                 </FormGroup>
+
                                 <FormGroup className={classes.formGroup}>
                                     <Label for="voice">Voice:</Label>
                                     <select
@@ -247,66 +248,16 @@ const Talker = () => {
                                         onChange={handlerStop}
                                     ></select>
                                 </FormGroup>
-                                <Row form className={classes.formGroup}>
-                                    <Col md={4}>
-                                        <FormGroup
-                                            className={classes.rangeInput}
-                                        >
-                                            <Label for="rate">
-                                                Rate: <b>{rate}</b>
-                                            </Label>
-                                            <Input
-                                                type="range"
-                                                id="rate"
-                                                min="0.1"
-                                                max="2"
-                                                value={rate}
-                                                step="0.1"
-                                                onChange={(e) => handlerRate(e)}
-                                            />
-                                        </FormGroup>
-                                    </Col>
-                                    <Col md={4}>
-                                        <FormGroup
-                                            className={classes.rangeInput}
-                                        >
-                                            <Label for="pitch">
-                                                Pitch: <b>{pitch}</b>
-                                            </Label>
-                                            <Input
-                                                type="range"
-                                                id="pitch"
-                                                min="0.1"
-                                                max="2"
-                                                value={pitch}
-                                                step="0.1"
-                                                onChange={(e) =>
-                                                    handlerPitch(e)
-                                                }
-                                            />
-                                        </FormGroup>
-                                    </Col>
-                                    <Col md={4}>
-                                        <FormGroup
-                                            className={classes.rangeInput}
-                                        >
-                                            <Label for="pitch">
-                                                Volume: <b>{volume}</b>
-                                            </Label>
-                                            <Input
-                                                type="range"
-                                                id="volume"
-                                                min="0.1"
-                                                max="2"
-                                                value={volume}
-                                                step="0.1"
-                                                onChange={(e) =>
-                                                    handlerVolume(e)
-                                                }
-                                            />
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
+
+                                <LevelsControl
+                                    rate={rate}
+                                    handlerRate={handlerRate}
+                                    pitch={pitch}
+                                    handlerPitch={handlerPitch}
+                                    volume={volume}
+                                    handlerVolume={handlerVolume}
+                                />
+
                                 <PlayControl
                                     isPaused={isPaused}
                                     isSpeak={isSpeak}
