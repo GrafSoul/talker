@@ -1,5 +1,4 @@
 import React from 'react';
-import { FormGroup, Row, Col, Label, Input } from 'reactstrap';
 import classes from './LevelsControl.module.scss';
 
 const LevelsControl = ({
@@ -11,13 +10,13 @@ const LevelsControl = ({
     handlerVolume,
 }) => {
     return (
-        <Row form className={classes.formGroup}>
-            <Col md={4}>
-                <FormGroup className={classes.rangeInput}>
-                    <Label for="rate">
+        <div className={classes.formGroup}>
+            <div md={4}>
+                <div className={classes.rangeInput}>
+                    <label htmlFor="rate">
                         Rate: <b>{rate}</b>
-                    </Label>
-                    <Input
+                    </label>
+                    <input
                         type="range"
                         id="rate"
                         min="0.1"
@@ -26,14 +25,14 @@ const LevelsControl = ({
                         step="0.1"
                         onChange={(e) => handlerRate(e)}
                     />
-                </FormGroup>
-            </Col>
-            <Col md={4}>
-                <FormGroup className={classes.rangeInput}>
-                    <Label for="pitch">
+                </div>
+            </div>
+            <div md={4}>
+                <div className={classes.rangeInput}>
+                    <label htmlFor="pitch">
                         Pitch: <b>{pitch}</b>
-                    </Label>
-                    <Input
+                    </label>
+                    <input
                         type="range"
                         id="pitch"
                         min="0.1"
@@ -42,14 +41,14 @@ const LevelsControl = ({
                         step="0.1"
                         onChange={(e) => handlerPitch(e)}
                     />
-                </FormGroup>
-            </Col>
-            <Col md={4}>
-                <FormGroup className={classes.rangeInput}>
-                    <Label for="pitch">
+                </div>
+            </div>
+            <div md={4}>
+                <div className={classes.rangeInput}>
+                    <label htmlFor="pitch">
                         Volume: <b>{volume}</b>
-                    </Label>
-                    <Input
+                    </label>
+                    <input
                         type="range"
                         id="volume"
                         min="0.1"
@@ -58,9 +57,9 @@ const LevelsControl = ({
                         step="0.1"
                         onChange={(e) => handlerVolume(e)}
                     />
-                </FormGroup>
-            </Col>
-        </Row>
+                </div>
+            </div>
+        </div>
     );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Container, Row, Jumbotron, Form, FormGroup, Input } from 'reactstrap';
 
 import PlayControl from '../PlayControl/PlayControl';
+import TextControl from '../TextControl/TextControl';
 import LevelsControl from '../LevelsControl/LevelsControl';
 import VoiceControl from '../VoiceControl/VoiceControl';
 import classes from './Talker.module.scss';
@@ -188,86 +188,57 @@ const Talker = () => {
     return (
         <>
             {compatibility.current ? (
-                <Container className={classes.content}>
+                <div className={classes.content}>
                     <div
                         className={isSpeak ? null : classes.curtainBlocked}
                         onClick={handlerStop}
                     ></div>
                     <div className={classes.contentWrap}>
-                        <Jumbotron className={classes.jumbotron}>
-                            <Form action="" method="get">
-                                <FormGroup className={classes.formGroup}>
-                                    <div
-                                        ref={panelRef}
-                                        className={
-                                            isSpeak ? null : classes.panelText
-                                        }
-                                    ></div>
-                                    <div
-                                        className={
-                                            isSpeak
-                                                ? null
-                                                : classes.textareaBlocked
-                                        }
-                                    >
-                                        <div
-                                            ref={wordRef}
-                                            className={
-                                                isSpeak
-                                                    ? null
-                                                    : classes.currentWord
-                                            }
-                                        ></div>
-                                    </div>
+                        <div className={classes.controlPanel}>
+                            <PlayControl
+                                isPaused={isPaused}
+                                isSpeak={isSpeak}
+                                text={text}
+                                handlerSpeak={handlerSpeak}
+                                handlerContinue={handlerContinue}
+                                handlerPause={handlerPause}
+                                handlerStop={handlerStop}
+                                handlerClear={handlerClear}
+                            />
 
-                                    <Input
-                                        disabled={isSpeak ? false : true}
-                                        type="textarea"
-                                        id="text"
-                                        ref={textRef}
-                                        className={classes.inputText}
-                                        value={text}
-                                        onChange={(e) => handlerText(e)}
-                                        onClick={handlerStop}
-                                    ></Input>
-                                </FormGroup>
+                            <VoiceControl
+                                voices={voices}
+                                handlerStop={handlerStop}
+                            />
 
-                                <VoiceControl
-                                    voices={voices}
-                                    handlerStop={handlerStop}
-                                />
-
-                                <LevelsControl
-                                    rate={rate}
-                                    handlerRate={handlerRate}
-                                    pitch={pitch}
-                                    handlerPitch={handlerPitch}
-                                    volume={volume}
-                                    handlerVolume={handlerVolume}
-                                />
-
-                                <PlayControl
-                                    isPaused={isPaused}
-                                    isSpeak={isSpeak}
-                                    text={text}
-                                    handlerSpeak={handlerSpeak}
-                                    handlerContinue={handlerContinue}
-                                    handlerPause={handlerPause}
-                                    handlerStop={handlerStop}
-                                    handlerClear={handlerClear}
-                                />
-                            </Form>
-                        </Jumbotron>
+                            <LevelsControl
+                                rate={rate}
+                                handlerRate={handlerRate}
+                                pitch={pitch}
+                                handlerPitch={handlerPitch}
+                                volume={volume}
+                                handlerVolume={handlerVolume}
+                            />
+                        </div>
+                        <TextControl
+                            text={text}
+                            textRef={textRef}
+                            panelRef={panelRef}
+                            isSpeak={isSpeak}
+                            handlerStop={handlerStop}
+                            handlerText={handlerText}
+                            wordRef={wordRef}
+                        />
                     </div>
-                </Container>
+                </div>
             ) : (
-                <Container>
-                    <Row>
+                <div>
+                    <div>
                         <p className={classes.unsupported}>
                             Speech Synthesis API Not Supported!
                         </p>
-                    </Row>
-                </Container>
+                    </div>
+                </div>
             )}
         </>
     );
