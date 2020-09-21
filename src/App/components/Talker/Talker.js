@@ -1,16 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {
-    Container,
-    Row,
-    Jumbotron,
-    Form,
-    FormGroup,
-    Label,
-    Input,
-} from 'reactstrap';
+import { Container, Row, Jumbotron, Form, FormGroup, Input } from 'reactstrap';
 
 import PlayControl from '../PlayControl/PlayControl';
 import LevelsControl from '../LevelsControl/LevelsControl';
+import VoiceControl from '../VoiceControl/VoiceControl';
 import classes from './Talker.module.scss';
 
 const Talker = () => {
@@ -239,15 +232,10 @@ const Talker = () => {
                                     ></Input>
                                 </FormGroup>
 
-                                <FormGroup className={classes.formGroup}>
-                                    <Label for="voice">Voice:</Label>
-                                    <select
-                                        className="form-control"
-                                        id="voice"
-                                        ref={voices}
-                                        onChange={handlerStop}
-                                    ></select>
-                                </FormGroup>
+                                <VoiceControl
+                                    voices={voices}
+                                    handlerStop={handlerStop}
+                                />
 
                                 <LevelsControl
                                     rate={rate}
