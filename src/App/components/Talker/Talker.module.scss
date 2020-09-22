@@ -1,13 +1,13 @@
 .content {
-    padding-top: 70px;
-    height: 100vh;
+    padding: 40px 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
-
-    .contentWrap {
-        outline: 1px solid red;
+    .selectControl {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .curtainBlocked {
@@ -22,6 +22,7 @@
     .controlPanel {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
+        ;
     }
 }

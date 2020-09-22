@@ -1,14 +1,58 @@
-.button {
-    margin: 0 5px 10px;
-    outline: none;
-}
-
-button {
-    outline: none;
-    position: relative;
-    z-index: 150;
+.nameButton {
+    width: 110px;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border: 1px solid rgb(49, 59, 66);
+    border-radius: 6px;
+    color: rgb(173, 173, 173);
+    font-size: 12px;
 }
 
 .buttonGroup {
     text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.button {
+    margin: 0 6px 0 0;
+    outline: none;
+    position: relative;
+    z-index: 150;
+    padding: 10px 13px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1b1e24;
+    border-radius: 6px;
+    border: 2px solid rgb(49, 59, 66);
+
+    &:hover {
+        border: 2px solid rgb(79, 95, 107);
+    }
+
+
+}
+
+.buttonSpeak {
+    color: #057702;
+}
+
+.buttonContinue,
+.buttonPause {
+    color: #277fc7;
+}
+
+.buttonStop,
+.buttonClear {
+    color: #c7276a;
+}
+
+.button:disabled {
+    opacity: .5;
+
+    &:hover {
+        border: 2px solid rgb(49, 59, 66);
+    }
 }

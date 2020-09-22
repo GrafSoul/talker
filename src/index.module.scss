@@ -51,6 +51,10 @@ button::-moz-focus-inner {
     background-color: transparent;
 }
 
+textarea::selection {
+    background-color: #b8c3da;
+}
+
 /* FONTS */
 @font-face {
     font-family: 'SFUIText';
@@ -87,4 +91,5 @@ body {
     font-weight: normal;
     font-size: 16px;
     line-height: 1.7;
+    overflow: hidden;
 }

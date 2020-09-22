@@ -193,19 +193,19 @@ const Talker = () => {
                         className={isSpeak ? null : classes.curtainBlocked}
                         onClick={handlerStop}
                     ></div>
-                    <div className={classes.contentWrap}>
-                        <div className={classes.controlPanel}>
-                            <PlayControl
-                                isPaused={isPaused}
-                                isSpeak={isSpeak}
-                                text={text}
-                                handlerSpeak={handlerSpeak}
-                                handlerContinue={handlerContinue}
-                                handlerPause={handlerPause}
-                                handlerStop={handlerStop}
-                                handlerClear={handlerClear}
-                            />
 
+                    <div className={classes.controlPanel}>
+                        <PlayControl
+                            isPaused={isPaused}
+                            isSpeak={isSpeak}
+                            text={text}
+                            handlerSpeak={handlerSpeak}
+                            handlerContinue={handlerContinue}
+                            handlerPause={handlerPause}
+                            handlerStop={handlerStop}
+                            handlerClear={handlerClear}
+                        />
+                        <div className={classes.selectControl}>
                             <VoiceControl
                                 voices={voices}
                                 handlerStop={handlerStop}
@@ -220,16 +220,16 @@ const Talker = () => {
                                 handlerVolume={handlerVolume}
                             />
                         </div>
-                        <TextControl
-                            text={text}
-                            textRef={textRef}
-                            panelRef={panelRef}
-                            isSpeak={isSpeak}
-                            handlerStop={handlerStop}
-                            handlerText={handlerText}
-                            wordRef={wordRef}
-                        />
                     </div>
+                    <TextControl
+                        text={text}
+                        textRef={textRef}
+                        panelRef={panelRef}
+                        isSpeak={isSpeak}
+                        handlerStop={handlerStop}
+                        handlerText={handlerText}
+                        wordRef={wordRef}
+                    />
                 </div>
             ) : (
                 <div>
