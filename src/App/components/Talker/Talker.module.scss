@@ -8,7 +8,10 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        flex: 1;
     }
+
+
 
     .curtainBlocked {
         position: absolute;
@@ -20,9 +23,23 @@
     }
 
     .controlPanel {
+        margin: 10px 0 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        ;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .content {
+
+        .controlPanel {
+            align-items: flex-start;
+        }
+
+        .selectControl {
+            flex-direction: row;
+
+        }
     }
 }

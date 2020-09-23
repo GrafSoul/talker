@@ -43,7 +43,7 @@ const createWindow = async () => {
         y: mainWindowState.y,
         width: mainWindowState.width,
         height: mainWindowState.height,
-        minWidth: 800,
+        minWidth: 1050,
         minHeight: 600,
         titleBarStyle: 'hidden',
         backgroundColor: '#282c34',

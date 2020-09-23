@@ -10,14 +10,15 @@ const LevelsControl = ({
     handlerVolume,
 }) => {
     return (
-        <div className={classes.formGroup}>
-            <div md={4}>
+        <div className={classes.levelsControl}>
+            <div className={classes.columnInput}>
                 <div className={classes.rangeInput}>
                     <label htmlFor="rate">
                         Rate: <b>{rate}</b>
                     </label>
                     <input
                         type="range"
+                        className={classes.range}
                         id="rate"
                         min="0.1"
                         max="2"
@@ -27,13 +28,14 @@ const LevelsControl = ({
                     />
                 </div>
             </div>
-            <div md={4}>
+            <div className={classes.columnInput}>
                 <div className={classes.rangeInput}>
                     <label htmlFor="pitch">
                         Pitch: <b>{pitch}</b>
                     </label>
                     <input
                         type="range"
+                        className={classes.range}
                         id="pitch"
                         min="0.1"
                         max="2"
@@ -43,13 +45,14 @@ const LevelsControl = ({
                     />
                 </div>
             </div>
-            <div md={4}>
+            <div className={classes.columnInput}>
                 <div className={classes.rangeInput}>
-                    <label htmlFor="pitch">
+                    <label htmlFor="volume">
                         Volume: <b>{volume}</b>
                     </label>
                     <input
                         type="range"
+                        className={classes.range}
                         id="volume"
                         min="0.1"
                         max="2"
