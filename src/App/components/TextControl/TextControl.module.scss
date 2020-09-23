@@ -1,22 +1,47 @@
-.formGroup {
-    margin-bottom: 10px;
-    position: relative;
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+    border-color: #ced4da !important;
+    box-shadow: none !important;
+}
+
+.textControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 135px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    transition: .3s all ease;
 }
 
 .inputTextWrap {
+    flex: 1;
     width: 100%;
-    outline: 1px solid blue;
+    border: 1px solid #b0afaf;
+    background-color: #fff;
+    position: relative;
+    display: flex;
 }
 
-.inputText {}
-
-.inputText:focus {}
-
-textarea {
-    resize: vertical;
+.inputText {
+    flex: 1;
+    display: block;
+    padding: 12px;
+    font-family: 'SFUIText', sans-serif;
+    font-size: 18px;
+    color: #333;
+    border: 0;
+    resize: none;
+    overflow-x: auto;
 }
 
 .textareaBlocked {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -29,29 +54,37 @@ textarea {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 8px 13px;
+    padding: 12px;
+    font-family: 'SFUIText', sans-serif;
+    font-size: 18px;
+    color: #333;
     z-index: 300;
-    min-width: 300px;
     word-wrap: break-word;
-    border: 1px solid #ced4da;
+    border: 1px solid #949494;
     overflow-x: auto;
     background-color: rgba(255, 255, 255, 1);
+    box-shadow: inset 1px 1px 12px rgba(0, 0, 0, .8);
+    cursor: move;
 }
 
 .currentWord {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
+    position: relative;
     color: #fff;
     font-size: 1.3em;
     z-index: 350;
     background-color: #202833;
-    padding: 2px 10px 8px;
+    padding: 2px 15px 7px;
     border-radius: 12px;
     display: inline-block;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .panelText span {
     display: inline-block;
+}
+
+@media screen and (min-width: 1200px) {
+    .textControl {
+        top: 98px;
+    }
 }

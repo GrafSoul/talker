@@ -11,7 +11,7 @@ const TextControl = ({
     wordRef,
 }) => {
     return (
-        <div className={classes.formGroup}>
+        <div className={classes.textControl}>
             <div
                 ref={panelRef}
                 className={isSpeak ? null : classes.panelText}
@@ -22,17 +22,20 @@ const TextControl = ({
                     className={isSpeak ? null : classes.currentWord}
                 ></div>
             </div>
-            <div className={classes.inputTextWrap}>
-                <textarea
-                    disabled={isSpeak ? false : true}
-                    id="text"
-                    ref={textRef}
-                    className={classes.inputText}
-                    value={text}
-                    onChange={(e) => handlerText(e)}
-                    onClick={handlerStop}
-                ></textarea>
-            </div>
+            {!isSpeak ? null : (
+                <div className={classes.inputTextWrap}>
+                    <textarea
+                        autoFocus
+                        disabled={isSpeak ? false : true}
+                        id="text"
+                        ref={textRef}
+                        className={classes.inputText}
+                        value={text}
+                        onChange={(e) => handlerText(e)}
+                        onClick={handlerStop}
+                    ></textarea>
+                </div>
+            )}
         </div>
     );
 };

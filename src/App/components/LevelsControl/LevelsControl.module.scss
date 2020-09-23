@@ -5,6 +5,7 @@
     margin: 3px 0 0;
 
     label {
+        font-size: 15px;
         margin-right: 10px;
         color: rgb(173, 173, 173);
         white-space: nowrap;
@@ -12,6 +13,7 @@
         b {
             width: 20px;
             display: inline-block;
+            color: rgb(235, 235, 235);
         }
     }
 }
@@ -21,7 +23,7 @@
 }
 
 .rangeInput {
-    margin: 10px 0 15px 24px;
+    margin: 10px 0 15px 14px;
     display: flex;
 
     input {

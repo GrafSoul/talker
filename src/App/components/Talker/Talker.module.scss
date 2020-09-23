@@ -9,9 +9,8 @@
         flex-direction: column;
         justify-content: flex-start;
         flex: 1;
+        transition: .3s all ease;
     }
-
-
 
     .curtainBlocked {
         position: absolute;
@@ -27,6 +26,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        transition: .3s all ease;
     }
 }
 
@@ -39,7 +39,6 @@
 
         .selectControl {
             flex-direction: row;
-
         }
     }
 }

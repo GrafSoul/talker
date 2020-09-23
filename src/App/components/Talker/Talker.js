@@ -90,7 +90,7 @@ const Talker = () => {
                 let currentWord = document.getElementById(
                     'word_span_' + wordIndexRef.current,
                 );
-                currentWord.style.color = 'blue';
+                currentWord.style.color = '#277fc7';
                 currentWord.style.backgroundColor = '#e4e4e4';
                 currentWord.style.padding = '0 3px';
                 currentWord.style.display = 'inline-block';
