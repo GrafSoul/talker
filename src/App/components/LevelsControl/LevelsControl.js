@@ -14,7 +14,7 @@ const LevelsControl = ({
             <div className={classes.columnInput}>
                 <div className={classes.rangeInput}>
                     <label htmlFor="rate">
-                        Rate: <b>{rate}</b>
+                        Rate: <b>{rate * 10}</b>
                     </label>
                     <input
                         type="range"
@@ -31,7 +31,7 @@ const LevelsControl = ({
             <div className={classes.columnInput}>
                 <div className={classes.rangeInput}>
                     <label htmlFor="pitch">
-                        Pitch: <b>{pitch}</b>
+                        Pitch: <b>{pitch * 10}</b>
                     </label>
                     <input
                         type="range"
@@ -48,7 +48,7 @@ const LevelsControl = ({
             <div className={classes.columnInput}>
                 <div className={classes.rangeInput}>
                     <label htmlFor="volume">
-                        Volume: <b>{volume}</b>
+                        Volume: <b>{volume * 10}</b>
                     </label>
                     <input
                         type="range"

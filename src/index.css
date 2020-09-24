@@ -93,3 +93,30 @@ body {
     line-height: 1.7;
     overflow: hidden;
 }
+
+.ck-editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: 'SFUIText', sans-serif;
+    color: #333;
+    border: 0;
+}
+
+.ck-editor__main {
+    flex: 1;
+    position: relative;
+}
+
+.ck-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: auto;
+}
+
+.ck-content p::selection {
+    background-color: #b8c3da;
+}

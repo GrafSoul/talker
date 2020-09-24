@@ -223,6 +223,7 @@ const Talker = () => {
                     </div>
                     <TextControl
                         text={text}
+                        setText={setText}
                         textRef={textRef}
                         panelRef={panelRef}
                         isSpeak={isSpeak}

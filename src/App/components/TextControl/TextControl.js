@@ -1,8 +1,12 @@
 import React from 'react';
+import CKEditor from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 import classes from './TextControl.module.scss';
 
 const TextControl = ({
     text,
+    setText,
     textRef,
     panelRef,
     isSpeak,
@@ -12,6 +16,20 @@ const TextControl = ({
 }) => {
     return (
         <div className={classes.textControl}>
+            <div className={classes.inputTextWrap}>
+                <CKEditor
+                    editor={ClassicEditor}
+                    data="<p>Hello from CKEditor 5!</p>"
+                    onInit={(editor) => {
+                        const data = editor.getData();
+                        setText(data);
+                    }}
+                    onChange={(event, editor) => {
+                        const data = editor.getData();
+                        setText(data);
+                    }}
+                />
+            </div>
             <div
                 ref={panelRef}
                 className={isSpeak ? null : classes.panelText}
@@ -22,7 +40,7 @@ const TextControl = ({
                     className={isSpeak ? null : classes.currentWord}
                 ></div>
             </div>
-            {!isSpeak ? null : (
+            {/* {!isSpeak ? null : (
                 <div className={classes.inputTextWrap}>
                     <textarea
                         autoFocus
@@ -35,7 +53,7 @@ const TextControl = ({
                         onClick={handlerStop}
                     ></textarea>
                 </div>
-            )}
+            )} */}
         </div>
     );
 };
