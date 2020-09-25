@@ -115,6 +115,7 @@ body {
     right: 0;
     bottom: 0;
     overflow-x: auto;
+    border: none !important;
 }
 
 .ck-content p::selection {

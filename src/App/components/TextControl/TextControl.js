@@ -19,7 +19,7 @@ const TextControl = ({
             <div className={classes.inputTextWrap}>
                 <CKEditor
                     editor={ClassicEditor}
-                    data="<p>Hello from CKEditor 5!</p>"
+                    data="<p>Hello from Talker!</p>"
                     onInit={(editor) => {
                         const data = editor.getData();
                         setText(data);

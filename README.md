@@ -1,11 +1,10 @@
 # Talker
 
-## Under construction!
-
-Applications for reading text with a voice engine. 
+Applications for reading text with a voice engine.
 Made using - Electron.js, React.js, Speech Synthesis API.
 
 ## Run for start development version
+
 Install [NodeJS]. I also recommend installing and using [Yarn] for developing applications.
 Below is a list of commands to deploy the project locally
 
@@ -26,6 +25,13 @@ npm build
 // or
 yarn build
 ```
+
+## TODO
+
+-   Implement the ability to open files in various formats
+-   Implement the ability to save edited files
+-   Implement the ability to save in different file formats
+-   Make it split into pages when there is a large amount of text.
 
 ## Copyright
 
