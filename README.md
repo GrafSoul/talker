@@ -5,7 +5,7 @@ Made using - Electron.js, React.js, Speech Synthesis API.
 
 ### Download
 
-[Talker Setup 0.1.0](http://bit.do/talker-010) - (OS Windows, zip, 64 Mb)
+[Talker Setup 0.1.0](http://bit.do/talker-010) - (OS Windows, zip, 64 Mb)  
 [Talker Portable Setup 0.1.0](http://bit.do/talker010portable) - (OS Windows, zip, 64 Mb)
 
 <span id="qr_code" style="
